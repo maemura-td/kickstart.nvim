@@ -2,7 +2,7 @@ return {
   'nvimdev/lspsaga.nvim',
   config = function()
     require('lspsaga').setup {
-      vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc'),
+      vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>'),
     }
   end,
   after = 'nvim-lspconfig',

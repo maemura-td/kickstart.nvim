@@ -157,6 +157,8 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+vim.o.fileencodings = 'utf8, sjis'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -950,6 +952,14 @@ require('lazy').setup({
       lazy = '💤 ',
     },
   },
+})
+
+-- TODO:Move other file.
+vim.keymap.set('n', 'tx', '<cmd>belowright new<CR><cmd>resize 15<CR><cmd>terminal<CR>', { desc = 'Open a new terminal below' })
+
+vim.api.nvim_create_augroup('Terminal', { clear = true })
+vim.api.nvim_create_autocmd('TermOpen', {
+  command = 'setlocal nonumber',
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
