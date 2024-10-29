@@ -1,10 +1,12 @@
 return {
   'nvimdev/lspsaga.nvim',
-  config = function()
-    require('lspsaga').setup {
-      vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>'),
-    }
-  end,
+  opts = {},
+  keys = {
+    { 'K', '<cmd>Lspsaga hover_doc<CR>', mode = 'n' },
+    { 'P', '<cmd>Lspsaga peek_definition<CR>', mode = 'n' },
+    { 'gn', '<cmd>Lspsaga rename<CR>', mode = 'n' },
+    { 'gt', '<cmd>Lspsaga term_toggle<CR>', mode = 'n' },
+  },
   after = 'nvim-lspconfig',
   dependencies = {
     'nvim-treesitter/nvim-treesitter',

@@ -7,9 +7,17 @@ return {
       { 'nvim-lua/plenary.nvim' }, -- for curl, log wrapper
     },
     build = 'make tiktoken', -- Only on MacOS or Linux
+    keys = {
+      { 'gp', '<cmd>CopilotChat<CR>', mode = 'n', desc = 'Open Copilot Chat' },
+    },
     opts = {
       debug = true, -- Enable debugging
       -- See Configuration section for rest
+      window = {
+        layout = 'float',
+        width = 0.75,
+        height = 0.75,
+      },
     },
     -- See Commands section for default commands if you want to lazy load on them
   },
