@@ -955,7 +955,7 @@ require('lazy').setup({
 })
 
 -- TODO:Move other file.
-vim.keymap.set('n', 'tx', '<cmd>belowright new<CR><cmd>resize 15<CR><cmd>terminal<CR>', { desc = 'Open a new terminal below' })
+vim.keymap.set('n', '<leader>tt', '<cmd>belowright new<CR><cmd>resize 15<CR><cmd>terminal<CR>', { desc = 'Open a new terminal below' })
 
 vim.api.nvim_create_augroup('Terminal', { clear = true })
 vim.api.nvim_create_autocmd('TermOpen', {
