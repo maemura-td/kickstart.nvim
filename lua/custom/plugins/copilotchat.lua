@@ -8,7 +8,7 @@ return {
     },
     build = 'make tiktoken', -- Only on MacOS or Linux
     keys = {
-      { 'gp', '<cmd>CopilotChat<CR>', mode = 'n', desc = 'Open Copilot Chat' },
+      { '<leader>tc', '<cmd>CopilotChat<CR>', mode = 'n', desc = 'Toggle Copilot Chat' },
     },
     opts = {
       debug = true, -- Enable debugging
